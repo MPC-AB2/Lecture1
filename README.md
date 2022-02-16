@@ -3,13 +3,13 @@
 ## Preparation
 
 1. Each team will Sign Up for GitHub and will give the name of the GitHub profile to the lecturers.
-2. If not available download **PORTABLE** version of the Git.
+2. If not available download PORTABLE version of the Git.
 3. Run Git bash.
 4. Set username by: `$ git config --global user.name "name_of_your_GitHub_profile"`
 5. Set email by: `$ git config --global user.email "email@example.com"`
 6. Select some MAIN folder with write permision.
 7. Clone the **Lecture1** repository from GitHub by: `$ git clone https://github.com/MPC-AB2/Lecture1.git`
-8. In the MAIN folder should be new folder Lecture1.
+8. In the MAIN folder should be new folder **Lecture1**.
 9. In the **Lecture1** folder create subfolder **NAME_OF_YOUR_TEAM**.
 10. In the **NAME_OF_YOUR_TEAM** folder create two subfolders: **TASK1** and **TASK2**
 11. Run Git bash in **Lecture1** folder (should be *main* branch active).
@@ -37,7 +37,7 @@
    * Apply total variation filter on testing image
    * Apply non-local means (NLM) filter on testing image
 
-6. Explore each method more deeply and try to find the optimal parameters’ setting of each method in order to get the most efficient and useful result (estimation of denoised image). Calculate above-mentioned evaluation criteria for each method. Save one **TIFF** image as a joined figure consisted of 7 subfigures showing the best achieved results of particular denoising methods (also with evaluation criteria values). **Push** your program script into GitHub repository **Lecture1** using the **branch of your team** (stage changed -> fill commit window -> sign off -> commit -> push -> select NAME_OF_YOUR_TEAM branch -> push).
+6. Explore each method more deeply and try to find the optimal parameters’ setting of each method in order to get the most efficient and useful result (estimation of denoised image). Calculate above-mentioned evaluation criteria for each method. Save one **TIFF** image as a joined figure consisted of 7 subfigures showing the best achieved results of particular denoising methods (also with evaluation criteria values). **Push** your program script into GitHub repository **Lecture1** using the **branch of your team** (stage changed -> fill commit message -> sign off -> commit -> push -> select *NAME_OF_YOUR_TEAM* branch -> push -> manager-core -> web browser -> fill your credentials).
 
 ### Second task – a student competition
 
@@ -49,4 +49,4 @@
 
 2. In the next step, explore the data. Make a script in **Lecture1\NAME_OF_YOUR_TEAM\TASK2** folder to apply any of the tested methods, or their combination, to the image dataset and try to get the best denoising results. Please, note that the dataset covers images of various degrees of noise, which may differ also between particular RGB channels of each image. You need to consider all these aspects in development of your method.
 
-3. Submit the best-obtained result of your method evaluated on the competition dataset using the evaluation function (i.e. submit the calculated evaluation values) into a shared [Excel table](https://docs.google.com/spreadsheets/d/1W-kq6u11Wf8HGYT3mj8hwNaUwhdwMoKl/edit?usp=sharing&ouid=104533478166360687639&rtpof=true&sd=true). The evaluation of results from each team will be presented at the end of the lecture. **Push** your final program with the best results into GitHub repository **Lecture1** using the **branch of your team** (stage changed -> fill commit window -> sign off -> commit -> push -> select NAME_OF_YOUR_TEAM branch -> push).
+3. Submit the best-obtained result of your method evaluated on the competition dataset using the evaluation function (i.e. submit the calculated evaluation values) into a shared [Excel table](https://docs.google.com/spreadsheets/d/1W-kq6u11Wf8HGYT3mj8hwNaUwhdwMoKl/edit?usp=sharing&ouid=104533478166360687639&rtpof=true&sd=true). The evaluation of results from each team will be presented at the end of the lecture. **Push** your final program with the best results into GitHub repository **Lecture1** using the **branch of your team** (stage changed -> fill commit message -> sign off -> commit -> push -> select *NAME_OF_YOUR_TEAM* branch -> push -> manager-core).
