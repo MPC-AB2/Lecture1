@@ -1,4 +1,4 @@
-# MPC-AB2 – Lecture 1 – IMAGE DENOISING
+# Lecture 1 – IMAGE DENOISING
 
 ## Preparation
 
