@@ -12,9 +12,9 @@
 8. In the MAIN folder should be new folder Lecture1.
 9. In the **Lecture1** folder create subfolder **NAME_OF_YOUR_TEAM**.
 10. In the **NAME_OF_YOUR_TEAM** folder create two subfolders: **TASK1** and **TASK2**
-11. Run Git bash in **Lecture1** folder (should be “main” branch active).
+11. Run Git bash in **Lecture1** folder (should be *main* branch active).
 12. Create new branch for your team by: `$ git checkout -b NAME_OF_YOUR_TEAM`
-13. Check that  “NAME_OF_YOUR_TEAM” branch is active.
+13. Check that  *NAME_OF_YOUR_TEAM* branch is active.
 14. Continue to First task...
 
 ## Tasks to do
@@ -41,11 +41,11 @@
 
 ### Second part – a student competition
 
-1. Download the images in a zip folder from [here](https://www.vut.cz/www_base/vutdisk.php?i=283824a5ed). Extract the content of the zip folder into **Lecture1** folder. The zip folder contains an encrypted ground truht images and their noisy versions. The encrypted MATLAB function “noise_eval.p” will serve for evaluation of your results obtained in a challenge competition. The function allows automatic calculation of PSNR, SSIM, and PIQE from the denoised images at the input path. Function could be called as:
+1. Download the images in a zip folder from [here](https://www.vut.cz/www_base/vutdisk.php?i=283824a5ed). Extract the content of the zip folder into **Lecture1** folder. The zip folder contains an encrypted ground truht images (*GT.mat*) and their noisy versions (**images_noisy** folder). The encrypted MATLAB function *noise_eval.p* will serve for evaluation of your results obtained in a challenge competition. The function allows automatic calculation of PSNR, SSIM, and PIQE from the denoised images at the input path. Function could be called as:
 
-* *noise_eval(path_to_denoised_images)* to get evaluation values, or
-* *evaluation_details = noise_eval(path_to_denoised_images)* to get detailed evaluation for each image, or
-* *noise_eval(path_to_denoised_images, True)* to get graphical output.
+* `noise_eval(path_to_denoised_images)` to print the evaluation values, or
+* `evaluation_details = noise_eval(path_to_denoised_images)` to get strucure of the detailed evaluation for each image, or
+* `noise_eval(path_to_denoised_images, True)` to get the graphical output in addition to printed values.
 
 2. In the next step, explore the data. Make a script in **Lecture1\NAME_OF_YOUR_TEAM\TASK2** folder to apply any of the tested methods, or their combination, to the image dataset and try to get the best denoising results. Please, note that the dataset covers images of various degrees of noise, which may differ also between particular RGB channels of each image. You need to consider all these aspects in development of your method.
 
