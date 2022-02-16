@@ -39,7 +39,7 @@
 
 6. Explore each method more deeply and try to find the optimal parameters’ setting of each method in order to get the most efficient and useful result (estimation of denoised image). Calculate above-mentioned evaluation criteria for each method. Save one **TIFF** image as a joined figure consisted of 7 subfigures showing the best achieved results of particular denoising methods (also with evaluation criteria values). **Push** your program script into GitHub repository **Lecture1** using the **branch of your team** (stage changed -> fill commit window -> sign off -> commit -> push -> select NAME_OF_YOUR_TEAM branch -> push).
 
-### Second part – a student competition
+### Second task – a student competition
 
 1. Download the images in a zip folder from [here](https://www.vut.cz/www_base/vutdisk.php?i=283824a5ed). Extract the content of the zip folder into **Lecture1** folder. The zip folder contains an encrypted ground truht images (*GT.mat*) and their noisy versions (**images_noisy** folder). The encrypted MATLAB function *noise_eval.p* will serve for evaluation of your results obtained in a challenge competition. The function allows automatic calculation of PSNR, SSIM, and PIQE from the denoised images at the input path. Function could be called as:
 
