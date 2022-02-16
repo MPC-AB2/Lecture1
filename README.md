@@ -1,4 +1,6 @@
 # Lecture1
 Image denoising
 
-Data: https://www.vut.cz/www_base/vutdisk.php?i=283767a64b
+First task data: https://www.vut.cz/www_base/vutdisk.php?i=283822a7cc
+
+Second task data: https://www.vut.cz/www_base/vutdisk.php?i=283824a5ed
