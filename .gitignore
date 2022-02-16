@@ -3,5 +3,7 @@ MPC-AB2 Lecture1 image denoising
 *.mat
 *.jpg
 *.jpeg
+*.png
+*.npy
 *.asv
 *.db
