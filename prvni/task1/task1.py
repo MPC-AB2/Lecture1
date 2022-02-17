@@ -7,6 +7,8 @@ from skimage.restoration import denoise_tv_chambolle
 from scipy.ndimage import gaussian_filter
 from scipy import signal, fft
 
+from fastaniso import anisodiff
+
 
 if __name__ == '__main__':
     img2 = cv2.imread('/Users/ondra/dev/school/Lecture1/prvni/task1/Lecture1_first_data/Lenna_(noisy_image).png',
@@ -52,13 +54,18 @@ if __name__ == '__main__':
     ## Bilateral filter
     img_bilateral = cv2.bilateralFilter(img2, 15, 70, 70)
 
+    img_aniso = anisodiff(img2)
+
     ## Total variation filter
     img_tv = denoise_tv_chambolle(img2, weight=0.1)
 
+    ## Non-local means
+    img_nl = cv2.fastNlMeansDenoising(img2, h=23, templateWindowSize=7, searchWindowSize=21)
 
-    plt.figure()
+
+    plt.figure(figsize=(16, 9), dpi=100)
     ax1 = plt.subplot(2, 4, 1)
-    ax1.imshow(img1, cmap="gray")
+    ax1.imshow(img2, cmap="gray")
     ax1.set_title("Original noise image")
     ax1.axis('off')
 
@@ -82,10 +89,21 @@ if __name__ == '__main__':
     ax5.set_title("Bilateral filter")
     ax5.axis('off')
 
+    ax6 = plt.subplot(2, 4, 6)
+    ax6.imshow(img_aniso, cmap='gray')
+    ax6.set_title("Anisotropic diffusion")
+    ax6.axis('off')
+
+
     ax7 = plt.subplot(2, 4, 7)
     ax7.imshow(img_tv, cmap='gray')
     ax7.set_title("Total variation filter")
     ax7.axis('off')
+
+    ax8 = plt.subplot(2, 4, 8)
+    ax8.imshow(img_nl, cmap='gray')
+    ax8.set_title("Non-local means")
+    ax8.axis('off')
 
     plt.show()
 
