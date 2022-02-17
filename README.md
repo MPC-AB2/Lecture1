@@ -1,5 +1,7 @@
 # Lecture 1 – IMAGE DENOISING
 
+[**Benchmark Results**](https://moodle.vut.cz/pluginfile.php/400662/mod_resource/content/1/BenchmarkDenoising_2022.xlsx%20-%20List1.pdf)
+
 ## Preparation
 
 1. Each team will Sign Up for GitHub and will give the name of the GitHub profile to the lecturers.
