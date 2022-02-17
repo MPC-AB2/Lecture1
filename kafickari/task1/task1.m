@@ -5,4 +5,4 @@ PSNR = [];
 SSIM = [];
 BRISQUE = [];
 
-[PSNR, SSIM, BRISQUE] = eval(original,sum)
+[PSNR, SSIM, BRISQUE] = evaluate(original,sum)

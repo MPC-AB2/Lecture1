@@ -1,4 +1,4 @@
-function [PSNR,SSIM,BRISQUE] = eval(original,sum)
+function [PSNR,SSIM,BRISQUE] = evaluate(original,sum)
 
 Lenna_sum = imread(sum);
 Lenna_orig = imread(original);
