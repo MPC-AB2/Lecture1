@@ -46,6 +46,7 @@
 * `noise_eval(path_to_denoised_images)` to print the evaluation values, or
 * `evaluation_details = noise_eval(path_to_denoised_images)` to get strucure of the detailed evaluation for each image, or
 * `noise_eval(path_to_denoised_images, True)` to get the graphical output in addition to printed values.
+* *(Python evaluation)* [GT here](https://www.vut.cz/www_base/vutdisk.php?i=283995a2ca) and [function here](https://www.vut.cz/www_base/vutdisk.php?i=283996aed8) + [PIQE code here](https://github.com/buyizhiyou/NRVQA/blob/master/piqe.py)
 
 2. In the next step, explore the data. Make a script in **Lecture1\NAME_OF_YOUR_TEAM\TASK2** folder to apply any of the tested methods, or their combination, to the image dataset and try to get the best denoising results. Please, note that the dataset covers images of various degrees of noise, which may differ also between particular RGB channels of each image. You need to consider all these aspects in development of your method.
 
