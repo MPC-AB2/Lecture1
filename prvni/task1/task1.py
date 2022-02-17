@@ -13,5 +13,5 @@ if __name__ == '__main__':
     ssim = structural_similarity(img1, img2, data_range=img1.max() - img1.min())
     print(f"SSIM: {ssim}")
 
-    brisque_score = brisque.score(img2)
+    brisque_score = brisque.score(img1)
     print(f"Brisque: {brisque_score}")
