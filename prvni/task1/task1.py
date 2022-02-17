@@ -3,6 +3,7 @@ import numpy as np
 import imquality.brisque as brisque
 from matplotlib import pyplot as plt
 from skimage.metrics import structural_similarity
+from skimage.restoration import denoise_tv_chambolle
 from scipy.ndimage import gaussian_filter
 from scipy import signal, fft
 
@@ -26,7 +27,6 @@ if __name__ == '__main__':
     gauss = gaussian_filter(img2, sigma=sigma, order=0)
 
     ## Wiener
-
     def gaussian_kernel(kernel_size=3):
         h = signal.gaussian(kernel_size, kernel_size/3).reshape(kernel_size, 1)
         h = np.dot(h, h.transpose())
@@ -44,20 +44,48 @@ if __name__ == '__main__':
         return dummy
 
     kernel = gaussian_kernel(5)
-    weiner = wiener_filter(img2, kernel, K=5)
+    wiener_filt = wiener_filter(img2, kernel, K=5)
+
+    ## Adaptive Wiener filter
+    img_wiener = signal.wiener(img2, (7, 7), 10)
+
+    ## Bilateral filter
+    img_bilateral = cv2.bilateralFilter(img2, 15, 70, 70)
+
+    ## Total variation filter
+    img_tv = denoise_tv_chambolle(img2, weight=0.1)
+
 
     plt.figure()
-    plt.subplot(2, 4, 1)
-    plt.imshow(img1, cmap="gray")
-    plt.axis('off')
+    ax1 = plt.subplot(2, 4, 1)
+    ax1.imshow(img1, cmap="gray")
+    ax1.set_title("Original noise image")
+    ax1.axis('off')
 
-    plt.subplot(2, 4, 2)
-    plt.imshow(gauss, cmap="gray")
-    plt.axis('off')
+    ax2 = plt.subplot(2, 4, 2)
+    ax2.imshow(gauss, cmap="gray")
+    ax2.set_title("Gaussian filter")
+    ax2.axis('off')
 
-    plt.subplot(2, 4, 3)
-    plt.imshow(weiner, cmap="gray")
-    plt.axis('off')
+    ax3 = plt.subplot(2, 4, 3)
+    ax3.imshow(wiener_filt, cmap="gray")
+    ax3.set_title("Wiener filter")
+    ax3.axis('off')
+
+    ax4 = plt.subplot(2, 4, 4)
+    ax4.imshow(img_wiener, cmap='gray')
+    ax4.set_title("Adaptive Wiener filter")
+    ax4.axis('off')
+
+    ax5 = plt.subplot(2, 4, 5)
+    ax5.imshow(img_bilateral, cmap='gray')
+    ax5.set_title("Bilateral filter")
+    ax5.axis('off')
+
+    ax7 = plt.subplot(2, 4, 7)
+    ax7.imshow(img_tv, cmap='gray')
+    ax7.set_title("Total variation filter")
+    ax7.axis('off')
 
     plt.show()
 
